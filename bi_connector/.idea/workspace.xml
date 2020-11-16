@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="492d1cf6-6e0c-417e-8fbd-ac9addfe51dc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/controllers/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/query.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="44765620-46db-4431-b285-259bb8067c8c" />
+  <component name="ProjectId" id="1baHgg8Bw9VBtmbmfCMUZaB4Hbm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/views" />
+      <recent name="$PROJECT_DIR$/models" />
+      <recent name="$PROJECT_DIR$/controllers" />
+      <recent name="$PROJECT_DIR$/auth" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="492d1cf6-6e0c-417e-8fbd-ac9addfe51dc" name="Default Changelist" comment="" />
+      <created>1588863397008</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588863397008</updated>
+      <workItem from="1588863400248" duration="10259000" />
+      <workItem from="1588898437536" duration="2575000" />
+      <workItem from="1589292386936" duration="1052000" />
+      <workItem from="1589301952736" duration="18817000" />
+      <workItem from="1589812296017" duration="1203000" />
+      <workItem from="1589978642492" duration="2304000" />
+      <workItem from="1590170283245" duration="2386000" />
+      <workItem from="1590372183639" duration="1209000" />
+      <workItem from="1591211756540" duration="4878000" />
+      <workItem from="1591277296776" duration="619000" />
+      <workItem from="1591277953605" duration="1721000" />
+      <workItem from="1591642064009" duration="3255000" />
+      <workItem from="1591729806837" duration="1127000" />
+      <workItem from="1591807740206" duration="1404000" />
+      <workItem from="1592244458834" duration="588000" />
+      <workItem from="1593718839339" duration="2872000" />
+      <workItem from="1593996962061" duration="1221000" />
+      <workItem from="1594041910047" duration="2316000" />
+      <workItem from="1594063298274" duration="5361000" />
+      <workItem from="1594134660791" duration="1805000" />
+      <workItem from="1594690518244" duration="47349000" />
+      <workItem from="1595264713975" duration="673000" />
+      <workItem from="1595515550499" duration="21054000" />
+      <workItem from="1595865785893" duration="749000" />
+      <workItem from="1597933429393" duration="3436000" />
+      <workItem from="1597978989557" duration="330000" />
+      <workItem from="1602876161727" duration="2180000" />
+      <workItem from="1603989576478" duration="1270000" />
+      <workItem from="1604096511123" duration="1594000" />
+      <workItem from="1604325941144" duration="1938000" />
+      <workItem from="1604502199302" duration="15000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="107" y="200" width="1720" height="1000" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602877210487">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state x="107" y="200" width="1720" height="1000" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.27.1920.1173/1920.0.1920.1200@1920.0.1920.1200" timestamp="1602877210486" />
+    <state x="2543" y="269" width="672" height="678" key="search.everywhere.popup" timestamp="1597952659439">
+      <screen x="1920" y="0" width="1920" height="1200" />
+    </state>
+    <state x="2543" y="269" width="672" height="678" key="search.everywhere.popup/0.27.1920.1173/1920.0.1920.1200@1920.0.1920.1200" timestamp="1597952659439" />
+  </component>
+</project>
