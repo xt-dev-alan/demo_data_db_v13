@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+    
+        <record id="mrp_production_form_view" model="ir.ui.view">
+            <field name="name">mrp.production.form.view.inherit</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+                <header position="inside">
+                    <button string="Create QC" name="create_qc_inspection" type="object" class="oe_highlight"/>
+                </header>
+
+                <field name="origin" position="after">
+                    <field name="sale_order_id" />
+                    <field name="customer_po" />
+                </field>
+
+                <div name="button_box" position="inside">
+                    <button name="view_qc_inspection" type="object" attrs="{'invisible': [('inspection_count', '=', 0)]}" class="oe_stat_button" icon="fa-check-circle-o">
+                        <div class="o_field_widget o_stat_info">
+                            <span class="o_stat_value"> <field name="inspection_count" widget="statinfo" nolabel="1"/> </span>
+                            <span class="o_stat_text">Quality Control</span>
+                        </div>
+                    </button>
+                </div>
+            </field>
+        </record>
+
+        <record id="mrp_production_tree_view" model="ir.ui.view">
+            <field name="name">mrp.production.tree.inherit</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_tree_view"/>
+            <field name="arch" type="xml">
+                <field name="origin" position="after">
+                    <field name="customer_po" />
+                </field>
+            </field>
+        </record>
+
+    </data>
+    
+
+</odoo>

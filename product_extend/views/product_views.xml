@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+
+        <record id="product_template_form_view" model="ir.ui.view">
+            <field name="name">product.template.form.view.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <page name="general_information" position="after">
+                    <page string="Product Details">
+                        <group col="4">
+                            <field name="num_item" />
+                            <field name="description_x" />
+                            <field name="msrp" />
+                            <field name="upc" />
+                            <field name="types" />
+                            <field name="country_id" />
+                        </group>
+                        <group col="6">
+                            <field name="length" />
+                            <field name="width" />
+                            <field name="depth" />
+                        </group>
+                        <group col="4">
+                            <field name="prop65" />
+                            <field name="prop65_ids" attrs="{'invisible': [('prop65', '=', True)]}" widget="many2many_tags"/>
+                            <field name="reach" />
+                            <field name="reach_ids" attrs="{'invisible': [('reach', '=', True)]}" widget="many2many_tags"/>
+                            <field name="rosh" />
+                            <field name="rohs_ids" attrs="{'invisible': [('rosh', '=', True)]}" widget="many2many_tags"/>
+                            <field name="htc_id" />
+                            <field name="coo_id" />
+                            <field name="shelf_pack_qty" />
+                            <field name="pricing_schedule" />
+                        </group>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+    </data>
+
+</odoo>

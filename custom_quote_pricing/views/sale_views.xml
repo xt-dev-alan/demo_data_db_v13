@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- sale.order inherit form view -->
+        <record id="view_order_form_extend" model="ir.ui.view">
+            <field name="name">view.order.form.extend</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//tree/field[@name='tax_id']" position="before">
+                    <field name="quote_pricing_id" invisible="1"/>
+                    <button name="action_open_quote_pricing" groups="custom_quote_pricing.quote_pricing_setting" icon="fa-list" type="object"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

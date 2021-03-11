@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="product_freight_cost" model="product.product">
+            <field name="name">[DLP Project Freight]</field>
+            <field name="type">service</field>
+        </record>
+        
+        <record id="product_tool_cost" model="product.product">
+            <field name="name">[DLP Project Tooling]</field>
+            <field name="type">service</field>
+        </record>
+
+    </data>
+</odoo>

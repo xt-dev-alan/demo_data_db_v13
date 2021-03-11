@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_rohs,access.product.rohs,model_product_rohs,,1,1,1,1
+access_product_htc,access.product.htc,model_product_htc,,1,1,1,1
+access_product_coo,access.product.coo,model_product_coo,,1,1,1,1
+access_product_prop65,access.product.prop65,model_product_prop65,,1,1,1,1
+access_product_reach,access.product.reach,model_product_reach,,1,1,1,1

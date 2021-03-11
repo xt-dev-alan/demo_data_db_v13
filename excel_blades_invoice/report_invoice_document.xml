@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+            <xpath expr="//h2" position="attributes">
+                <attribute name="class">text-right</attribute>
+            </xpath>
+
+            <xpath expr="//div[@id='informations']" position="attributes">
+                <attribute name="class">row mt32 mb32 float-right</attribute>
+            </xpath>
+
+            <div name="due_date" position="replace"/>
+            <div name="origin" position="replace"/> 
+            <div name="customer_code" position="replace"/>
+
+            <xpath expr="//div[@id='informations']" position="after">
+                <div id="partner_Addresses" class="row mt32 mb32">
+                    <div class="col-6">
+                        <strong>Bill To</strong><br/>
+                        <t t-set="invoice_address" t-value="o.partner_id._get_current_address('invoice', o.invoice_origin or False)"/>
+                        <p class="d-block" t-esc="'%s %s %s %s %s'%(invoice_address.street, invoice_address.street2, invoice_address.city, invoice_address.state_id.name or '', invoice_address.country_id.name or '')"/>
+                    </div>
+                    <div class="col-6">
+                        <strong>Ship To</strong><br/>
+                        <t t-set="delivery_address" t-value="o.partner_id._get_current_address('delivery', o.invoice_origin or False)"/>
+                        <p class="d-block" t-esc="'%s %s %s %s %s'%(delivery_address.street, delivery_address.street2, delivery_address.city, delivery_address.state_id.name or '', delivery_address.country_id.name or '')"/>
+                    </div>
+                </div>
+            </xpath>
+
+            <xpath expr="//thead//tr" position="before">
+                <tr>
+                    <th>P.O. No.</th>
+                    <th>Terms</th>
+                    <th>Due Date</th>
+                    <th>REP</th>
+                    <th>Ship Date</th>
+                    <th>Ship Via</th>
+                    <th>Wt/Ctn</th>
+                </tr>
+                <tr>
+                    <td t-esc="o.invoice_origin or '**'"/>
+                    <td t-esc="o.invoice_payment_term_id.name"/>
+                    <td t-esc="o.invoice_date_due"/>
+                    <td>..</td>
+                    <td>..</td>
+                    <td>..</td>
+                    <td>..</td>
+                </tr>               
+            </xpath>
+
+            <xpath expr="//th[@name='th_subtotal']" position="attributes">
+                <attribute name="colspan">2</attribute>
+            </xpath>
+
+            <th name="th_taxes" position="replace"/>
+            <span id="line_tax_ids" position="replace"/>
+
+            <xpath expr="//th[@name='th_description']" position="before">
+                <th>S.O. No.</th>
+                <th>Item</th>
+            </xpath>
+
+            <xpath expr="//td[@name='account_invoice_line_name']" position="before">
+                <td t-esc="o.invoice_origin or '**'"/>
+                <td t-esc="line.product_id.default_code"/>
+            </xpath>
+
+            <xpath expr="//th[@name='th_priceunit']//span" position="replace">
+                <span>Price</span>
+            </xpath>
+
+            <p name="payment_term" position="replace">
+                <p class="text-justify">
+                    RETURN POLICY: All items to be returned must be done so within 15 days of receipt of
+                    shipment. Any product(s) to be returned after that time must request and receive prior
+                    approval from Excel Blades. To request a return please have your Invoice No. ready at the
+                    time of the return request.
+                </p>
+            </p>
+
+            <div id="total" position="replace">
+                <div id="total" class="row">
+                    <div t-attf-class="#{'col-4' if report_type != 'html' else 'col-sm-7 col-md-5'} ml-auto">
+                        <table class="table table-sm;page-break-inside: avoid;">
+                            <tr class="border-black o_total">
+                                <td><strong>Total</strong></td>
+                                <td class="text-right">
+                                    <span t-field="o.amount_total"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+       
+        </template>
+    </data>
+
+</odoo>
