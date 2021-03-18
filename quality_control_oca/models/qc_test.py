@@ -89,7 +89,9 @@ class QcTestQuestion(models.Model):
     test = fields.Many2one(comodel_name="qc.test", string="Test")
     name = fields.Char(string="Name", required=True, translate=True)
     type = fields.Selection(
-        [("qualitative", "Qualitative"), ("quantitative", "Quantitative")],
+        [("qualitative", "Qualitative"), 
+        ("quantitative", "Quantitative"),
+        ("text", "Text")],
         string="Type",
         required=True,
     )

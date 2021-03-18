@@ -97,11 +97,15 @@
                                     <field name="possible_ql_values" invisible="1" />
                                     <field
                                         name="qualitative_value"
-                                        attrs="{'readonly': [('question_type', '=', 'quantitative')]}"
+                                        attrs="{'readonly': [('question_type', '!=', 'qualitative')]}"
+                                    />
+                                    <field
+                                        name="text_value"
+                                        attrs="{'readonly': [('question_type', '!=', 'text')]}"
                                     />
                                     <field
                                         name="quantitative_value"
-                                        attrs="{'readonly': [('question_type', '=', 'qualitative')]}"
+                                        attrs="{'readonly': [('question_type', '!=', 'quantitative')]}"
                                     />
                                     <field
                                         name="uom_id"

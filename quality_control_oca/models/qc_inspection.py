@@ -264,11 +264,14 @@ class QcInspectionLine(models.Model):
         "quantitative_value",
         "qualitative_value",
         "possible_ql_values",
+        "text_value"
     )
     def _compute_quality_test_check(self):
         for l in self:
             if l.question_type == "qualitative":
                 l.success = l.qualitative_value.ok
+            elif l.question_type == "text":
+                l.success = bool( l.text_value )
             else:
                 if l.uom_id.id == l.test_uom_id.id:
                     amount = l.quantitative_value
@@ -281,6 +284,7 @@ class QcInspectionLine(models.Model):
     @api.depends(
         "possible_ql_values", "min_value", "max_value", "test_uom_id", "question_type"
     )
+
     def _compute_valid_values(self):
         for l in self:
             if l.question_type == "qualitative":
@@ -319,6 +323,10 @@ class QcInspectionLine(models.Model):
         help="Value of the result for a qualitative question.",
         domain="[('id', 'in', possible_ql_values)]",
     )
+    text_value = fields.Text(
+        string="Text value",
+        help="Value of the result for a Text question.",
+    )
     notes = fields.Text(string="Notes")
     min_value = fields.Float(
         string="Min",
@@ -348,7 +356,9 @@ class QcInspectionLine(models.Model):
         help="UoM of the inspection value for a quantitative question.",
     )
     question_type = fields.Selection(
-        [("qualitative", "Qualitative"), ("quantitative", "Quantitative")],
+        [("qualitative", "Qualitative"), 
+        ("quantitative", "Quantitative"),
+        ("text", "Text")],
         string="Question type",
         readonly=True,
     )

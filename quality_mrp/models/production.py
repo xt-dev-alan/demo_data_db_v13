@@ -27,7 +27,7 @@ class MrpProduction(models.Model):
 
     def create_qc_inspection(self):
         inspection = self.env['qc.inspection'].sudo()
-        test = self.env.ref('quality_mrp.default_test_for_production')
+        test = self.env.ref('quality_mrp.default_test_for_production').sudo()
         for record in self:
             inspection_id = inspection.create({
                 'production_id': record.id,
