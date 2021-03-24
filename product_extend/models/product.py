@@ -9,7 +9,7 @@ class ProductTemplate(models.Model):
     num_item = fields.Char(string="# Item")
     description_x = fields.Char(string="Description")
     msrp = fields.Float(string="MSRP")
-    upc = fields.Char()
+    upc = fields.Char(string="UPC")
     types = fields.Selection([('retail', 'Retail Item'), ('mfg', 'MFG Part')], string='Type')
     country_id = fields.Many2one('res.country', string="Country")
     length = fields.Char(string="Length")
@@ -26,11 +26,23 @@ class ProductTemplate(models.Model):
     coo_id = fields.Many2one('product.coo', string="COO")
     shelf_pack_qty = fields.Integer(string='Shelf Pack QTY')
     pricing_schedule = fields.Selection([('wholesale', 'Wholesale'), ('distributor', 'Distributor')], string='Pricing Schedule')
+    shelf_pack_barcode = fields.Char(string="Shelf Pack Barcode")
+    xl_barcode = fields.Char(string="Product Barcode")
+    new_uom = fields.Char(string="Unit of Measure")
+    sales_BOX = fields.Char(string="BOX")
+    #PRICING
+    wholesale_price = fields.Float(string="Wholesale Price")
+    distributor_price = fields.Float(string="Distributor Price")
+    special_price = fields.Float(string="Special Price")
+    
+    
+   
 
 class ProductProduct(models.Model):
     _inherit = 'product.product'
 
         # MAIN INFO
+    sales_BOX = fields.Char(string="BOX")    
     num_item = fields.Char(string="# Item")
     description_x = fields.Char(string="Description")
     msrp = fields.Float(string="MSRP")
@@ -49,6 +61,13 @@ class ProductProduct(models.Model):
     coo_id = fields.Many2one('product.coo', string="COO")
     shelf_pack_qty = fields.Integer(string='Shelf Pack QTY')
     pricing_schedule = fields.Selection([('wholesale', 'Wholesale'), ('distributor', 'Distributor')], string='Pricing Schedule')
+    shelf_pack_barcode = fields.Char(string="Shelf Pack Barcode")
+    xl_barcode = fields.Char(string="Product Barcode")
+    new_uom = fields.Char(string="Unit of Measure")
+    #PRICING
+    wholesale_price = fields.Float(string="Wholesale Price")
+    distributor_price = fields.Float(string="Distributor Price")
+    special_price = fields.Float(string="Special Price")    
 
 
 # NEW MODELS
@@ -79,7 +98,6 @@ class ProductHTC(models.Model):
 class ProductCOO(models.Model):
     _name = 'product.coo'
     _description = 'Product COO'
-
     name = fields.Char(string='Name')
 
             
