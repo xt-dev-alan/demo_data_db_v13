@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-
-    <record id="default_test_for_production" model="qc.test">
-        <field name="name">DEFAULT TEST FOR PRODCUTION</field>
-        <field name="type">generic</field>
-    </record>
-
-</odoo>
